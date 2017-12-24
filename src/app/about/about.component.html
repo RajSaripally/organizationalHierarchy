@@ -1,0 +1,17 @@
+<mat-card id="about_container">
+  <mat-toolbar color="theme" class="profile-details">
+    <h2 class="card-header mat-display-1" color="primary">Personal Profile - {{name}}</h2>
+  </mat-toolbar>
+  <div class="row">
+  	<div class="col-sm-12 col-md-6">
+		<mat-card class="mat-card">
+			<img src="{{image}}"/>
+		</mat-card>
+  	</div>
+  	<div class="col-sm-12 col-md-6">
+  		<p align="left"><strong>Name: </strong>{{name}}</p>
+		<p align="left"><strong>Age: </strong>{{age}}</p>
+  		<p align="left"><strong>Responsibilities: </strong>{{profile}}</p>	
+  	</div>
+  </div>
+</mat-card>

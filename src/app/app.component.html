@@ -1,0 +1,66 @@
+<header class="navbar navbar-expand navbar-dark bd-navbar">
+  <mat-toolbar id="app_title_wrapper">
+    <h1 id="app_title">Organizational Hierarchy</h1>
+  </mat-toolbar>
+</header>
+
+<mat-card id="app_content_wrapper" *ngIf="personalInfo == 'false'">
+  <mat-toolbar color="theme" id="org-name-location-wrapper">
+    <h2 id="org_Name_Location" class="card-header mat-display-1" color="primary" (click)="showWholeTeam()">{{organization}} - {{location}}
+      <i class="material-icons" *ngIf="wholeTeam == 'true'">expand_less</i>
+      <i class="material-icons" *ngIf="wholeTeam != 'true'">expand_more</i>
+    </h2>
+  </mat-toolbar>
+  <mat-card-content *ngIf="wholeTeam == 'true'">
+    <div class="row">
+      <div class="col-lg-5 card teamContainer" *ngIf="firstTeam">
+        <mat-toolbar color="theme">
+          <h2 class="card-header mat-title first-team" (click)="showFirstTeam()">{{firstTeam.team}}
+            <i class="material-icons" *ngIf="Fistteamshow == 'true'">expand_less</i>
+            <i class="material-icons" *ngIf="Fistteamshow != 'true'">expand_more</i>
+          </h2>
+        </mat-toolbar>
+        <div class="row teamMembers" *ngIf="Fistteamshow == 'true'">
+          <div class="col-lg-4" *ngFor="let teammember of firstTeam.members">
+            <div class="card">
+                <div align="center" (click)="goAbout(teammember);">
+                  <div class="profile-pic-card">
+                    <img src="{{teammember.imageUrl}}"/>
+                  </div>
+                  <p class="name"><strong>Name: </strong>{{teammember.name}}</p>
+                  <p class="age"><strong>Age: </strong>{{teammember.age}}</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 card teamContainer" *ngIf="secodTeam">
+        <mat-toolbar color="theme">
+          <h2 class="card-header mat-title" (click)="showSecondTeam()">{{secodTeam.team}}
+            <i class="material-icons" *ngIf="Secondteamshow == 'true'">expand_less</i>
+            <i class="material-icons" *ngIf="Secondteamshow != 'true'">expand_more</i>
+          </h2>
+        </mat-toolbar>
+        <div class="row teamMembers" *ngIf="Secondteamshow == 'true'">
+          <div class="col-lg-4" *ngFor="let teammember of secodTeam.members">
+            <div class="card">
+                <div align="center" (click)="goAbout(teammember);">
+                  <div class="profile-pic-card">
+                    <img src="{{teammember.imageUrl}}"/>
+                  </div>
+                  <p class="name"><strong>Name: </strong>{{teammember.name}}</p>
+                  <p class="age"><strong>Age: </strong>{{teammember.age}}</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+<div class="button-row">
+  <button mat-raised-button *ngIf="personalInfo == 'true'" (click)="backToHome()">
+    <i class="material-icons">chevron_left</i>Back to Home
+  </button>
+</div>
+<router-outlet></router-outlet>

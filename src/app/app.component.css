@@ -1,0 +1,153 @@
+@import '../styles.css';
+
+.bd-navbar #app_title_wrapper {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 20px;
+  width: 100%;
+  margin : -2px -10px 20px -2px;
+}
+
+.bd-navbar mat-toolbar h1 {
+  color: #ec407a;
+}
+
+.mat-toolbar {
+  background-color: #ec407a;
+}
+
+.mat-toolbar:hover,
+button:hover {
+  background-color: #c71585;
+}
+
+mat-toolbar h2 {
+  color: #fff;
+}
+
+mat-toolbar h2 i {
+  vertical-align: middle;
+}
+
+#app_content_wrapper {
+  margin: 0 10px;
+}
+
+#app_title_wrapper h1 {
+  font-size: 30px;
+}
+
+#app_title {
+  font-family: 'Jaldi', sans-serif;
+}
+
+#app_title,
+#org_Name_Location,
+mat-toolbar h2.card-header {
+  width : 100%;
+  margin : auto;
+  text-align: center;
+}
+
+.card {
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 
+              0 2px 2px 0 rgba(0,0,0,.14), 
+              0 1px 5px 0 rgba(0,0,0,.12);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.card-header {
+  text-align: center;
+}
+
+.card.teamContainer {
+  margin-left: 5%;
+}
+
+.mat-card-content {
+  margin-top: 40px;
+}
+
+.card .profile-pic-card img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.teamMembers .card:hover {
+  background-color: #d3d3d3;
+  cursor: pointer;
+}
+
+.row.teamMembers {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.teamMembers p.name,
+.teamMembers p.age {
+  margin-bottom: 0;
+  font-family: 'Jaldi', sans-serif;
+  font-size: 16px;
+}
+
+mat-card mat-toolbar {
+  margin-bottom: 30px;
+}
+
+mat-toolbar.org-name-location-wrapper,
+mat-card h2,
+mat-card.profile-pic-card,
+button {
+  cursor: pointer;
+}
+
+button {
+    height: 40px;
+    border-radius: 10px;
+    width: 150px;
+    font-size: 12px;
+    margin-bottom: 12px;
+    outline: none;
+    background-color: #ec4071;
+    margin-left: 25px;
+    color: #fff;
+}
+
+button i{
+  vertical-align: middle;
+  margin-left: -15px;
+}
+
+@media screen and (max-width: 640px) {
+  button {
+      width: 100%;
+      text-align: center;
+      margin: 0 auto 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  
+  .card.teamContainer {
+    margin-left: 0;
+  }
+
+  .teamMembers .col-lg-4:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .card.teamContainer:not(:first-child){
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 1360px) and (min-width: 1200px) {
+  
+  .teamMembers .col-lg-4 {
+    padding-left: 0;
+  }
+  .teamMembers .col-lg-4 .card {
+    width: 150px;
+  }
+}

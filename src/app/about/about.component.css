@@ -1,0 +1,38 @@
+#about_container {
+	padding : 0;
+}
+.profile-details {
+	background-color: #ec407a;
+}
+.profile-details h2 {
+	width : 100%;
+	margin : auto;
+	text-align: center;
+	color : #fff;
+}
+mat-card .mat-card {
+	width:200px; 
+	height: auto; 
+	margin:0 auto;
+}
+.mat-card img {
+	width:100%; 
+	height: auto; 
+	margin:0px auto;
+}
+.mat-card div.row {
+    width: 100%;
+    margin: 5% 0;
+}
+div.row p {
+	font-family: 'Dancing Script', sans-serif;
+	font-size: 24px;
+}
+@media screen and (max-width: 990px) {
+  
+  .row .col-sm-12 p:not(:last-child) {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+}
